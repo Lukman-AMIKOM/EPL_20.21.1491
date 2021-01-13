@@ -156,6 +156,7 @@ public class MainFragment extends Fragment implements
         }
         MenuItem itemNightMode = menu.findItem(R.id.menu_night_mode);
         itemNightMode.setTitle(nightMode ? getString(R.string.light_mode) : getString(R.string.dark_mode));
+        mainActivity.getDelegate().setLocalNightMode(nightMode ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO);
         
         super.onCreateOptionsMenu(menu, inflater);
     }

@@ -118,7 +118,7 @@ public class ListFragment extends Fragment {
         
         recyclerView = view.findViewById(R.id.rv_main);
         recyclerView.setHasFixedSize(true);
-    
+        
         if (listType.contains("teams")) {
             spinnerSorter = view.findViewById(R.id.spinner_sorter);
             imgOrderingMode = view.findViewById(R.id.img_ordering_mode);
@@ -162,7 +162,7 @@ public class ListFragment extends Fragment {
         sorterName = getString(R.string.name);
         sorterEstablishedYear = getString(R.string.established_year);
         selectedSorter = sorterName;
-    
+        
         List<String> sorterList = Arrays.asList(getResources().getStringArray(R.array.teams_sorter));
         CustomSpinnerAdapter spinnerAdapter = new CustomSpinnerAdapter(Objects.requireNonNull(getContext()),
                 android.R.layout.simple_spinner_item, sorterList);
@@ -249,11 +249,15 @@ public class ListFragment extends Fragment {
         switch (listType) {
             case TYPE_RECENT_MATCHES:
             case TYPE_UPCOMING_MATCHES:
+                setMatchAdapter();
+                break;
             case TYPE_FAVORITE_MATCHES:
+                recyclerView.setPadding(0, 7, 0, 7);
                 setMatchAdapter();
                 break;
             case TYPE_TEAMS:
             case TYPE_FAVORITE_TEAMS:
+                recyclerView.setPadding(0, 7, 0, 7);
                 setTeamAdapter();
                 break;
             case TYPE_LEAGUE_TABLE:

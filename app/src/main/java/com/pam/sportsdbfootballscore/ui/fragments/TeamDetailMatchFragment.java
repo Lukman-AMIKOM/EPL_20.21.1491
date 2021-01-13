@@ -18,6 +18,7 @@ import com.pam.sportsdbfootballscore.adapters.DateGroupAdapter;
 import com.pam.sportsdbfootballscore.model.Match;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 
 public class TeamDetailMatchFragment extends Fragment {
@@ -64,6 +65,16 @@ public class TeamDetailMatchFragment extends Fragment {
     }
     
     private void setMatchList() {
+        if (matchMap.size() > 1) {
+            ArrayList<String> keys = new ArrayList<>(matchMap.keySet());
+            Collections.sort(keys, (o1, o2) -> Integer.compare(0, o1.compareTo(o2)));
+            
+            LinkedHashMap<String, ArrayList<Match>> copy = new LinkedHashMap<>(matchMap);
+            matchMap = new LinkedHashMap<>();
+            for (String key : keys) {
+                matchMap.put(key, copy.get(key));
+            }
+        }
         rvMatches.setLayoutManager(new LinearLayoutManager(getContext()));
         rvMatches.setAdapter(new DateGroupAdapter(matchMap, mainFragment, DateGroupAdapter.TEAM_DETAIL_FRAGMENT));
         pbMatches.setVisibility(View.GONE);

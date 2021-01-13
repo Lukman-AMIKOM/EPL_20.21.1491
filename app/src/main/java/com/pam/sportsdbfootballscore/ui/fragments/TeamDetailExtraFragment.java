@@ -88,7 +88,6 @@ public class TeamDetailExtraFragment extends Fragment {
     }
     
     private void setSocialMedia() {
-        System.out.println(team.getFacebook() == null);
         setImageIcon(getSocialMediaId(team.getFacebook()), imgFacebook, SOCIAL_TYPE_FACEBOOK);
         setImageIcon(getSocialMediaId(team.getTwitter()), imgTwitter, SOCIAL_TYPE_TWITTER);
         setImageIcon(getSocialMediaId(team.getInstagram()), imgInstagram, SOCIAL_TYPE_INSTAGRAM);

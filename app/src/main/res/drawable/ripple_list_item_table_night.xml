@@ -14,5 +14,5 @@
         </shape>
     </item>
     
-    <item android:drawable="@drawable/bg_bottom_border_date_title_night" />
+    <item android:drawable="@drawable/bg_bottom_border_table_row_night" />
 </ripple>

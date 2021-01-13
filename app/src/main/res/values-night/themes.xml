@@ -36,7 +36,7 @@
     </style>
     
     <style name="BottomMenu">
-        <item name="android:background">@drawable/bg_navigation_bottom_night</item>
+        <item name="android:background">@color/toolbar_color_night</item>
         <item name="itemIconTint">@color/bottom_navigation_color_night</item>
         <item name="itemTextColor">@color/bottom_navigation_color_night</item>
     </style>
@@ -76,11 +76,11 @@
     </style>
     
     <style name="DateGroupRecyclerView">
-        <item name="android:background">#8A8A8A</item>
+        <item name="android:background">#757575</item>
     </style>
     
     <style name="DateGroupLayout">
-        <item name="android:background">#5c5c5c</item>
+        <item name="android:background">#757575</item>
     </style>
     
     <style name="DateGroupTitleLayout">
@@ -96,8 +96,20 @@
         <item name="android:background">@drawable/ripple_list_item_night</item>
     </style>
     
+    <style name="ScoreBoardBackground">
+        <item name="android:background">@drawable/bg_score_night</item>
+    </style>
+    
     <style name="ListTextView.TeamName.Colored">
         <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="ListTextView.Score.Colored">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="ScoreSeparator">
+        <item name="android:background">@color/white</item>
     </style>
     
     <style name="ListImageFavoriteMatchLayout">
@@ -147,9 +159,6 @@
     <style name="ListTableTextView.Colored">
         <item name="android:textColor">@color/white</item>
     </style>
-    
-    
-    
     
     <style name="AboutBackground">
         <item name="android:background">@drawable/bg_fragment_about_night</item>

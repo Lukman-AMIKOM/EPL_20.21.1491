@@ -28,7 +28,6 @@ import com.pam.sportsdbfootballscore.model.Team;
 import com.pam.sportsdbfootballscore.ui.activities.MainActivity;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedHashMap;
 
 public class TeamDetailFragment extends Fragment {

@@ -2,13 +2,11 @@ package com.pam.sportsdbfootballscore.ui.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 
 import com.pam.sportsdbfootballscore.R;
-import com.pam.sportsdbfootballscore.helpers.PrefManager;
 import com.pam.sportsdbfootballscore.interfaces.DataListener;
 import com.pam.sportsdbfootballscore.ui.fragments.MainFragment;
 import com.pam.sportsdbfootballscore.ui.fragments.SplashScreenFragment;
@@ -31,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements DataListener {
         }
         
         hideToolbar();
-        setTheme();
         init();
     }
     
@@ -57,12 +54,6 @@ public class MainActivity extends AppCompatActivity implements DataListener {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
-    }
-    
-    private void setTheme() {
-        PrefManager prefManager = new PrefManager(this, MainFragment.PREF_THEME);
-        boolean nightMode = prefManager.getDarkMode(MainFragment.KEY_NIGHT_MODE);
-        getDelegate().setLocalNightMode(nightMode ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO);
     }
     
     @Override

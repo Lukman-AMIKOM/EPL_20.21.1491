@@ -81,7 +81,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             
             c.close();
         }
-        
+    
+        db.close();
         return favoriteMatchList;
     }
     
@@ -149,6 +150,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             c.close();
         }
         
+        db.close();
         return favoriteTeamList;
     }
     

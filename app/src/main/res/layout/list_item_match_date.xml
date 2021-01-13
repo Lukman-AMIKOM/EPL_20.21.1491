@@ -4,7 +4,6 @@
     style="@style/DateGroupLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="5dp"
     android:orientation="vertical">
     
     <include layout="@layout/date_group_title" />
@@ -13,5 +12,6 @@
         android:id="@+id/rv_matches"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="2dp"
         tools:listitem="@layout/list_item_match" />
 </LinearLayout>
