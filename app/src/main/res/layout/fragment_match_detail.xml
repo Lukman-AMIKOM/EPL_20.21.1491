@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.MatchDetailFragment">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout_match_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+        
+        <include
+            android:id="@+id/toolbar_match_detail"
+            layout="@layout/toolbar_detail" />
+    </com.google.android.material.appbar.AppBarLayout>
+    
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view_match_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_match_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <ImageView
+                android:id="@+id/img_stadium"
+                style="@style/MatchDetailStadiumImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/stadium_placeholder" />
+            
+            <ProgressBar
+                android:id="@+id/pb_stadium"
+                style="@style/MatchDetailProgressBar"
+                app:layout_constraintBottom_toBottomOf="@id/img_stadium"
+                app:layout_constraintEnd_toEndOf="@id/img_stadium"
+                app:layout_constraintStart_toStartOf="@id/img_stadium"
+                app:layout_constraintTop_toTopOf="@id/img_stadium"
+                tools:visibility="visible" />
+            
+            <include
+                layout="@layout/match_detail_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/img_stadium"
+                app:layout_constraintStart_toStartOf="@id/img_stadium"
+                app:layout_constraintTop_toTopOf="@id/img_stadium" />
+            
+            <include
+                layout="@layout/match_detail_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/img_stadium"
+                app:layout_constraintEnd_toEndOf="@id/img_stadium"
+                app:layout_constraintStart_toStartOf="@id/img_stadium" />
+            
+            <TextView
+                android:id="@+id/tv_league"
+                style="@style/MatchDetailLeagueTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/secular_one"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_stadium"
+                tools:text="English Premier League" />
+            
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_match_details"
+                style="@style/MatchDetailRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_league"
+                tools:listitem="@layout/list_item_match_detail" />
+            
+            <ImageView
+                android:id="@+id/img_match_thumbnail"
+                style="@style/MatchDetailStadiumImageView"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_match_details"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/match_thumbnail"
+                tools:visibility="visible" />
+            
+            <ProgressBar
+                android:id="@+id/pb_thumbnail"
+                style="@style/MatchDetailProgressBar"
+                app:layout_constraintBottom_toBottomOf="@id/img_match_thumbnail"
+                app:layout_constraintEnd_toEndOf="@id/img_match_thumbnail"
+                app:layout_constraintStart_toStartOf="@id/img_match_thumbnail"
+                app:layout_constraintTop_toTopOf="@id/img_match_thumbnail"
+                tools:visibility="visible" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

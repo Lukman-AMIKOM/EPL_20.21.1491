@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginVertical="3dp"
+    android:elevation="7dp"
+    app:cardCornerRadius="6dp">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_item_team"
+        style="@style/ListBackground.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        
+        <ImageView
+            android:id="@+id/img_team_logo"
+            style="@style/ListTeamLogoImageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/logo_man_utd" />
+        
+        <ProgressBar
+            android:id="@+id/pb_list_team"
+            style="@style/ListTeamLogoProgressBar"
+            app:layout_constraintBottom_toBottomOf="@id/img_team_logo"
+            app:layout_constraintEnd_toEndOf="@id/img_team_logo"
+            app:layout_constraintStart_toStartOf="@id/img_team_logo"
+            app:layout_constraintTop_toTopOf="@id/img_team_logo"
+            tools:visibility="visible" />
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/img_favorite"
+            app:layout_constraintStart_toEndOf="@id/img_team_logo"
+            app:layout_constraintTop_toTopOf="parent">
+            
+            <TextView
+                android:id="@+id/tv_team_name"
+                style="@style/ListTextView.TeamName.Colored"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/quantico"
+                android:textSize="16sp"
+                tools:text="Man United" />
+            
+            <TextView
+                android:id="@+id/tv_establised"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:fontFamily="@font/ubuntu_mono"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                tools:text="est. 1878" />
+        </LinearLayout>
+        
+        <ImageView
+            android:id="@+id/img_favorite"
+            style="@style/ListImageFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_favorite_default" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

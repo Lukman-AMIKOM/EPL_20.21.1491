@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_date_title"
+    style="@style/DateGroupTitleLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="6dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    
+    <TextView
+        android:id="@+id/tv_date_title"
+        style="@style/DateGroupTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/secular_one"
+        android:gravity="start|center_vertical"
+        android:padding="8dp"
+        app:drawableEndCompat="@drawable/ic_epl_logo_circle"
+        tools:text="Thursday, 7 January 2021" />
+</LinearLayout>

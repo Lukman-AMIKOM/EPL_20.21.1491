@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarStyle="outsideOverlay"
+    android:scrollbars="vertical"
+    tools:context=".ui.fragments.TeamDetailExtraFragment">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <include
+            android:id="@+id/layout_social_media"
+            layout="@layout/social_media" />
+        
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_extra"
+            style="@style/MatchDetailRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_social_media"
+            tools:listitem="@layout/list_item_match_detail" />
+        
+        <ProgressBar
+            android:id="@+id/pb_extra"
+            style="@style/MatchDetailProgressBar"
+            app:layout_constraintBottom_toBottomOf="@id/rv_extra"
+            app:layout_constraintEnd_toEndOf="@id/rv_extra"
+            app:layout_constraintStart_toStartOf="@id/rv_extra"
+            app:layout_constraintTop_toTopOf="@id/rv_extra"
+            tools:visibility="visible" />
+        
+        <TextView
+            android:id="@+id/tv_jersey_title"
+            style="@style/TeamDetailOverviewTextView.Title.Colored"
+            android:layout_marginTop="0dp"
+            android:paddingStart="8dp"
+            android:text="@string/jersey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_extra"
+            tools:ignore="RtlSymmetry" />
+        
+        <ImageView
+            android:id="@+id/img_jersey"
+            style="@style/JerseyImageView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:paddingVertical="12dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_jersey_title"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/jersey" />
+        
+        <ProgressBar
+            android:id="@+id/pb_jersey"
+            style="@style/MatchDetailProgressBar"
+            app:layout_constraintBottom_toBottomOf="@id/img_jersey"
+            app:layout_constraintEnd_toEndOf="@id/img_jersey"
+            app:layout_constraintStart_toStartOf="@id/img_jersey"
+            app:layout_constraintTop_toTopOf="@id/img_jersey"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

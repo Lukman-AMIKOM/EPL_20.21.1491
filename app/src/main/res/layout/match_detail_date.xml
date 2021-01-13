@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F0680981"
+    android:padding="4dp">
+    
+    <TextView
+        android:id="@+id/tv_match_date"
+        style="@style/MatchDetailOverlayTextView.Date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Thu, 7 Jan 2021" />
+    
+    <ImageView
+        android:id="@+id/icon_stadium"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ic_stadium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_match_date"
+        tools:ignore="ContentDescription" />
+    
+    <TextView
+        android:id="@+id/tv_stadium"
+        style="@style/MatchDetailOverlayTextView.Date"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/icon_stadium"
+        app:layout_constraintStart_toEndOf="@+id/icon_stadium"
+        app:layout_constraintTop_toTopOf="@id/icon_stadium"
+        tools:text="Old Trafford" />
+</androidx.constraintlayout.widget.ConstraintLayout>

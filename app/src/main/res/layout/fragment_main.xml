@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.MainFragment">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:fitsSystemWindows="true">
+        
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/main_toolbar"
+            style="@style/ToolbarBackground"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="8dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolbarTheme.Colored"
+            app:collapseIcon="@drawable/ic_back"
+            app:titleTextAppearance="@style/ToolbarTitleText" />
+    </com.google.android.material.appbar.AppBarLayout>
+    
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bottom_main"
+        style="@style/BottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemTextAppearanceActive="@style/BottomMenuTextAppearance"
+        app:itemTextAppearanceInactive="@style/BottomMenuTextAppearance"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/menu_navigation_bottom" />
+</LinearLayout>

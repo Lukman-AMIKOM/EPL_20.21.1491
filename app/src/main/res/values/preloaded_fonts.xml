@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abeezee</item>
+        <item>@font/catamaran</item>
+        <item>@font/catamaran_bold</item>
+        <item>@font/comfortaa</item>
+        <item>@font/quantico</item>
+        <item>@font/secular_one</item>
+        <item>@font/ubuntu</item>
+        <item>@font/ubuntu_mono</item>
+        <item>@font/ubuntu_mono_bold</item>
+    </array>
+</resources>

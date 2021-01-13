@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ListFragment">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout_list"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fitsSystemWindows="true">
+        
+        <include layout="@layout/toolbar_list" />
+    </com.google.android.material.appbar.AppBarLayout>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main"
+            style="@style/DateGroupRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingVertical="4dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/list_item_match_date" />
+        
+        <ProgressBar
+            android:id="@+id/pb_list_main"
+            style="@style/MatchDetailProgressBar"
+            app:layout_constraintBottom_toBottomOf="@id/rv_main"
+            app:layout_constraintEnd_toEndOf="@id/rv_main"
+            app:layout_constraintStart_toStartOf="@id/rv_main"
+            app:layout_constraintTop_toTopOf="@id/rv_main"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

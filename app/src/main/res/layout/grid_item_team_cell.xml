@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:elevation="7dp"
+    app:cardCornerRadius="6dp">
+    
+    <LinearLayout
+        android:id="@+id/layout_item_team"
+        style="@style/ListBackground.Colored"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:gravity="center">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp">
+            
+            <ImageView
+                android:id="@+id/img_team_logo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/logo_man_utd" />
+            
+            <ProgressBar
+                android:id="@+id/pb_list_team"
+                style="@style/ListTeamLogoProgressBar"
+                app:layout_constraintBottom_toBottomOf="@id/img_team_logo"
+                app:layout_constraintEnd_toEndOf="@id/img_team_logo"
+                app:layout_constraintStart_toStartOf="@id/img_team_logo"
+                app:layout_constraintTop_toTopOf="@id/img_team_logo"
+                tools:visibility="visible" />
+            
+            <TextView
+                android:id="@+id/tv_team_name"
+                style="@style/ListTextView.TeamName.Colored"
+                android:fontFamily="@font/quantico"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_team_logo"
+                tools:text="Man United" />
+            
+            <TextView
+                android:id="@+id/tv_establised"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:fontFamily="@font/ubuntu_mono"
+                android:gravity="center"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_team_name"
+                tools:ignore="SmallSp"
+                tools:text="est. 1878" />
+            
+            <ImageView
+                android:id="@+id/img_favorite"
+                style="@style/ListImageFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_favorite_default" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

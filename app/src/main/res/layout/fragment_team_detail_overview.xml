@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sv_description"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarStyle="outsideOverlay"
+    android:scrollbars="vertical"
+    tools:context=".ui.fragments.TeamDetailOverviewFragment">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_overview"
+        style="@style/TeamDetailOverviewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical">
+        
+        <TextView
+            android:id="@+id/tv_team_description_title"
+            style="@style/TeamDetailOverviewTextView.Title.Colored"
+            android:layout_marginTop="0dp"
+            android:paddingBottom="4dp"
+            android:text="@string/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        
+        <TextView
+            android:id="@+id/tv_team_description"
+            style="@style/TeamDetailOverviewTextView.Content.Justified"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_team_description_title"
+            tools:text="@string/dummy_description" />
+        
+        <TextView
+            android:id="@+id/tv_stadium_title"
+            style="@style/TeamDetailOverviewTextView.Title.Colored"
+            android:paddingBottom="4dp"
+            android:text="@string/stadium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_team_description" />
+        
+        <ImageView
+            android:id="@+id/img_stadium"
+            style="@style/MatchDetailStadiumImageView"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_stadium_title"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/stadium" />
+        
+        <ProgressBar
+            android:id="@+id/pb_stadium"
+            style="@style/MatchDetailProgressBar"
+            app:layout_constraintBottom_toBottomOf="@id/img_stadium"
+            app:layout_constraintEnd_toEndOf="@id/img_stadium"
+            app:layout_constraintStart_toStartOf="@id/img_stadium"
+            app:layout_constraintTop_toTopOf="@id/img_stadium"
+            tools:visibility="visible" />
+        
+        <TextView
+            android:id="@+id/tv_stadium_description"
+            style="@style/TeamDetailOverviewTextView.Content.Justified"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_stadium"
+            tools:text="@string/dummy_stadium_description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

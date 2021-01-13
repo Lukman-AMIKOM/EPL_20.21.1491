@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">EPL</string>
+    <string name="splash_screen_logo">Splash Screen Logo</string>
+    <string name="sort_by">Sort by:</string>
+    <string name="view_mode">View Mode</string>
+    <string name="delete">DELETE</string>
+    <string name="postponed">Postponed</string>
+    
+    <!-- Tab Titles -->
+    <string name="matches">Matches</string>
+    <string name="recent_matches">Results</string>
+    <string name="upcoming_matches">Fixtures</string>
+    <string name="teams">Teams</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorite_matches">Favorite Matches</string>
+    <string name="favorite_teams">Favorite Teams</string>
+    <string name="table">League Table</string>
+    <string name="tab_table">Table</string>
+    <string name="about">About</string>
+    
+    <string name="em_dash">—</string>
+    <string name="established">est. %s</string>
+    <string name="add_notification">Added to %s</string>
+    <string name="remove_notification">Removed from %s</string>
+    <string name="remove_favorite_confirmation">Are you sure you want to remove &lt;b>\"%s\"&lt;/b> from Favorites?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    
+    <!-- Match Details Titles -->
+    <string name="season_title">Season:</string>
+    <string name="time_title">Time:</string>
+    <string name="matchweek_title">Matchweek:</string>
+    <string name="spectators_title">Spectators:</string>
+    <string name="status_title">Status:</string>
+    
+    <string name="dark_mode">Dark Mode</string>
+    <string name="light_mode">Light Mode</string>
+    
+    <string name="lukman_hakim">Lukman Hakim</string>
+    <string name="email">lukman.hakim@students.amikom.ac.id</string>
+    <string name="bachelor_of_informatics">Bachelor of Informatics</string>
+    <string name="nim">20.21.1491</string>
+    <string name="university">University of AMIKOM Yogyakarta</string>
+    <string name="redirect_confirmation">This will redirect you to GitHub.com.\nDo you want to continue?</string>
+    
+    <string name="overview">Overview</string>
+    <string name="information">Information</string>
+    <string name="stadium">Stadium</string>
+    <string name="description">Description</string>
+    <string name="team_upcoming_matches">Upcoming Matches</string>
+    <string name="team_latest_results">Latest Results</string>
+    <string name="nicknames_title">Nicknames:</string>
+    <string name="stadium_title">Stadium:</string>
+    <string name="stadium_content">%s\n(%s capacity)</string>
+    <string name="location_title">Location:</string>
+    <string name="country_title">Country:</string>
+    <string name="competitions_title">Competitions:</string>
+    
+    <string name="name">name</string>
+    <string name="established_year">established year</string>
+    <string-array name="teams_sorter">
+        <item>@string/name</item>
+        <item>@string/established_year</item>
+    </string-array>
+    
+    <string name="dummy_description">Manchester United Football Club is an English professional football club, based in Old Trafford, Greater Manchester that plays in the Premier League. Founded as Newton Heath LYR Football Club in 1878, the club changed its name to Manchester United in 1902 and moved to Old Trafford in 1910. They are regarded as one of the most successful clubs in English football.\r\n\r\nManchester United have won the most League titles (20) of any English club, a joint record 11 FA Cups, four League Cups, and a record 20 FA Community Shields. The club has also won three European Cups, one UEFA Cup Winners\' Cup, one UEFA Super Cup, one Intercontinental Cup, and one FIFA Club World Cup. In 1998–99, the club won a continental treble of the Premier League, the FA Cup and the UEFA Champions League.\r\n\r\nThe 1958 Munich air disaster claimed the lives of eight players. In 1968, under the management of Matt Busby, Manchester United was the first English football club to win the European Cup. Alex Ferguson won 28 major honours, and 38 in total, from November 1986 to May 2013, when he announced his retirement after 26 years at the club. On 19 May 2014, Louis van Gaal was appointed as the club\'s new manager after Ferguson\'s successor David Moyes was sacked after only 10 months in charge, with the club\'s record appearance-maker, Ryan Giggs, appointed as his assistant after a brief period as caretaker manager.\r\n\r\nManchester United is the third-richest football club in the world for 2011–12 in terms of revenue, with an annual revenue of €395.9 million, and the world\'s second most valuable sports team in 2013, valued at $3.165 billion. It is one of the most widely supported football teams in the world. After being floated on the London Stock Exchange in 1991, the club was purchased by Malcolm Glazer in May 2005 in a deal valuing the club at almost £800 million, after which the company was taken private again. In August 2012, Manchester United made an initial public offering on the New York Stock Exchange.</string>
+    <string name="dummy_stadium_description">Old Trafford is a football stadium in Old Trafford, Greater Manchester, England, and the home of Manchester United F.C. With a capacity of 75,635, Old Trafford is the second-largest football stadium in the United Kingdom after Wembley Stadium, and the ninth-largest in Europe. It is about 0.5 miles (800 m) from Old Trafford Cricket Ground and the adjacent tram station.\r\n\r\nOld Trafford, nicknamed the Theatre of Dreams by Bobby Charlton, has been United\'s home ground since 1910, although from 1941 to 1949, as a result of bomb damage during the Second World War, the club shared Maine Road with local rivals Manchester City. Old Trafford underwent several expansions in the 1990s and 2000s, including the addition of extra tiers to the North, West and East Stands, which served to return the ground almost to its original capacity of 80,000. Future expansion is likely to involve the addition of a second tier to the South Stand, which would raise the capacity to over 90,000. The stadium\'s record attendance was recorded in 1939, when 76,962 spectators watched the FA Cup semi-final between Wolverhampton Wanderers and Grimsby Town.\r\n\r\nOld Trafford has hosted FA Cup semi-finals, England fixtures, matches at the 1966 World Cup and Euro 96 and the 2003 Champions League Final, as well as rugby league\'s annual Super League Grand Final and the final of two Rugby League World Cups. It also hosted football matches at the 2012 Summer Olympics, including women\'s international football for the first time in its history.</string>
+    <string name="jersey">Jersey:</string>
+    <string name="pos">Pos</string>
+    <string name="club">Club</string>
+    <string name="header_played">P</string>
+    <string name="header_won">W</string>
+    <string name="header_drawn">D</string>
+    <string name="header_lost">L</string>
+    <string name="header_goal_diff">GD</string>
+    <string name="header_points">Pts</string>
+</resources>

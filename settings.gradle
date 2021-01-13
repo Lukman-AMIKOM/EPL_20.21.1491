@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "SportsDB Football Score 20.21.1491"
